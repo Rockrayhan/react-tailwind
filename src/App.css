@@ -10,4 +10,17 @@
 
 .catagories-card{
     height: 250px;
+    width: 200px;
+}
+
+.type-card{
+    height: 60%;
+    
+}
+
+.type-icon{
+    color: brown;
+    height: 20%;
+    
+
 }
