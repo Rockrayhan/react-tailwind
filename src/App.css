@@ -23,6 +23,18 @@
     height: 20%;
 }
 
+.subscribe-section{
+    margin-bottom: -50px;
+    position: relative;
+}
+
 .footer {
-    background-color: #120F2D;;
+    background-color: #120F2D;
+    height: 90vh;
+}
+
+.footer-content{
+    
+    bottom: 0;
+    
 }
