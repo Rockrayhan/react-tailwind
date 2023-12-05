@@ -4,7 +4,7 @@ const Footer = () => {
     return (
        <div className='footer pt-24 pb-6 text-white flex items-end'>
        <div className="container">
-       <div className='grid grid-cols-6 text-center text-white '>
+       <div className='grid grid-cols-6 text-center text-white'>
             <div className="col-span-2 flex flex-col gap-5"> 
             <h1 className='text-4xl font-serif text-blue-200'>Ektu Khani Tech </h1>
             <p className='text-gray-300'>Edumel is a Bootstrap Template for online courses education websites support multiple courses</p>
