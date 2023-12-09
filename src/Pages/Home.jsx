@@ -3,6 +3,7 @@ import Banner from '../Components/Banner';
 import Catagories from '../Components/Catagories';
 import Types from '../Components/Types';
 import Subscribe from '../Components/Subscribe';
+import Courses from '../Components/Courses';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Banner></Banner>
         <Catagories></Catagories>
         <Types></Types>
+        <Courses></Courses>
         <Subscribe></Subscribe>
 
     </div>

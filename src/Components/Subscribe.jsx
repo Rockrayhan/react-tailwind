@@ -2,7 +2,7 @@ import React from 'react';
 
 const Subscribe = () => {
     return (
-        <div className='container center rounded-2xl bg-slate-200 w-4/5 p-10 subscribe-section'>
+        <div className='container center rounded-2xl bg-slate-200 w-4/5 p-10 subscribe-section mt-20'>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
                 <div className='col-span-1'>
                     <img src="assets/img/img9.png" alt="" />
