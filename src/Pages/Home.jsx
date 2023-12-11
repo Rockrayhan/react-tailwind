@@ -4,6 +4,7 @@ import Catagories from '../Components/Catagories';
 import Types from '../Components/Types';
 import Subscribe from '../Components/Subscribe';
 import Courses from '../Components/Courses';
+import Testimonial from '../Components/Testimonial';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Catagories></Catagories>
         <Types></Types>
         <Courses></Courses>
+        <Testimonial></Testimonial>
         <Subscribe></Subscribe>
 
     </div>
