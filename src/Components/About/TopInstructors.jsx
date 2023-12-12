@@ -7,7 +7,7 @@ const TopInstructors = () => {
                 <div className='flex flex-col gap-10'>
 
                     <h4 className='text-sky-600	font-semibold'> Not sure where to start ?</h4>
-                    <h1 className='text-3xl font-bold text-teal-950	'>Our Top Instructors</h1>
+                    <h1 className='text-4xl font-bold text-teal-950	'>Our Top Instructors</h1>
                     <p className='text-gray-600'>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quis facere obcaecati dolores distinctio amet explicabo! Delectus molestiae enim numquam, necessitatibus, sit sint nam ut at esse rerum sequi placeat.
                     </p>
