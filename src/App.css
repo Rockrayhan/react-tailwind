@@ -52,16 +52,16 @@
     height: 100%;
     background: inherit;
     /* filter: blur(10px); Adjust the blur radius as needed */
-    background: rgba(95, 158, 160, 0.438);
+    background: rgba(3, 31, 66, 0.9);
 }
 
 .page-header-title {
     color: white;
-    font-size: 4rem;
+    font-size: 40px;
     font-weight: bold;
     margin-top: 0;
     position: relative; /* Ensure the title is positioned on top of the blurred image */
-    z-index: 1; /* Set a higher z-index to bring the title above the blurred background */
+    z-index: 1; 
 }
 
 
