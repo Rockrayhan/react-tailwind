@@ -1,6 +1,8 @@
 import React from 'react';
 import AboutBanner from '../Components/About/AboutBanner';
 import TopInstructors from '../Components/About/TopInstructors';
+import AboutCounter from '../Components/aboutCounter';
+import Testimonial from '../Components/Testimonial';
 
 const About = () => {
   return (
@@ -16,6 +18,9 @@ const About = () => {
 
         <AboutBanner></AboutBanner>
         <TopInstructors></TopInstructors>
+<div className='mt-32'><AboutCounter></AboutCounter></div>
+        <Testimonial></Testimonial>
+
         </div>
     </div>
   );

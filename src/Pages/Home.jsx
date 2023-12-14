@@ -5,12 +5,14 @@ import Types from '../Components/Types';
 import Subscribe from '../Components/Subscribe';
 import Courses from '../Components/Courses';
 import Testimonial from '../Components/Testimonial';
+import AboutCounter from '../Components/aboutCounter';
 
 const Home = () => {
     return (
     <div>
 
         <Banner></Banner>
+        <AboutCounter></AboutCounter>
         <Catagories></Catagories>
         <Types></Types>
         <Courses></Courses>
