@@ -6,7 +6,7 @@ import Testimonial from '../Components/Testimonial';
 
 const About = () => {
   return (
-    <div className='bg-slate-100'>
+    <div className=''>
         {/* ==== page Header ====*/}
         <div className='page-header'>
           <div className='center container'>
