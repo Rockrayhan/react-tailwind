@@ -10,7 +10,7 @@ const About = () => {
         {/* ==== page Header ====*/}
         <div className='page-header'>
           <div className='center container'>
-            <h1 className='page-header-title'> About page </h1>
+            <h1 className='page-header-title'> About US </h1>
           </div>
         </div>
         {/* ================= */}

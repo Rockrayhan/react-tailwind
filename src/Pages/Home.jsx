@@ -6,6 +6,7 @@ import Subscribe from '../Components/Subscribe';
 import Courses from '../Components/Courses';
 import Testimonial from '../Components/Testimonial';
 import AboutCounter from '../Components/aboutCounter';
+import ChatApp from '../Components/ChatApp';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Courses></Courses>
         <Testimonial></Testimonial>
         <Subscribe></Subscribe>
+        <ChatApp></ChatApp>
 
     </div>
     );
