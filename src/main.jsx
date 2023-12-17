@@ -10,7 +10,7 @@ import Home from './Pages/Home.jsx';
 import About from './Pages/About.jsx';
 import Blog from './Pages/Blog.jsx';
 import Contact from './Pages/Contact.jsx';
-import Courses from './Pages/Courses.jsx';
+import AllCourses from './Pages/AllCourses.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path:"courses",
-        element: <Courses/>
+        element: <AllCourses/>
       },
     ]
   },

@@ -1,20 +1,16 @@
-
-import { Outlet } from 'react-router'
-import './App.css'
-import Home from './Pages/Home'
-import Header from './Shared/Header'
-import Footer from './Shared/Footer'
+import { Outlet } from "react-router";
+import "./App.css";
+import Header from "./Shared/Header";
+import Footer from "./Shared/Footer";
 
 function App() {
-  
-
   return (
-    <div>
-<Header></Header>
-<Outlet></Outlet>
-<Footer></Footer>
+    <div className="bg-slate-100">
+      <Header></Header>
+      <Outlet></Outlet>
+      <Footer></Footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
