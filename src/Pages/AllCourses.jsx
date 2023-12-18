@@ -1,12 +1,13 @@
 import React from "react";
-
+import Breadcrumb from '../Components/Breadcum';
 const AllCourses = () => {
   return (
     <div className="bg-slate-100">
       {/* ==== page Header ====*/}
-      <div className="page-header">
-        <div className="center container">
-          <h1 className="page-header-title"> All Courses </h1>
+      <div className='page-header'>
+        <div className='center container flex-col gap-7'>
+          <h1 className='page-header-title'> All Courses </h1>
+        <div><Breadcrumb></Breadcrumb></div>
         </div>
       </div>
       {/* ================= */}

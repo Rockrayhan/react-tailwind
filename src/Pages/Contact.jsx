@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Breadcrumb from '../Components/Breadcum';
 
 const Contact = () => {
   const form = useRef();
@@ -29,9 +30,10 @@ const Contact = () => {
   return (
     <div>
       {/* ==== page Header ====*/}
-      <div className="page-header">
-        <div className="center container">
-          <h1 className="page-header-title"> Contact US </h1>
+      <div className='page-header'>
+        <div className='center container flex-col gap-7'>
+          <h1 className='page-header-title'> Contact Us </h1>
+        <div><Breadcrumb></Breadcrumb></div>
         </div>
       </div>
       {/* ================= */}

@@ -6,7 +6,7 @@ const Breadcrumb = () => {
   const pathnames = location.pathname.split('/').filter((x) => x);
 
   return (
-    <div>
+    <div className='page-header-cumbread'>
       <Link to="/">Home</Link>
       {pathnames.map((name, index) => (
         <span key={index}>
