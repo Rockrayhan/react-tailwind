@@ -5,7 +5,6 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 const Testimonial = () => {
     return (
         <div className='bg-slate-200 py-16 mt-10 container text-center p-6'>
-
             <OwlCarousel className="owl-theme owl-carousel" loop margin={1} items={3}>
                 {/* Testimonial item */}
                     <div className='py-5 p-5 bg-white'>
@@ -55,13 +54,7 @@ const Testimonial = () => {
                         </div>
                         </div>
                     </div>
-
-
-               
-                   
             </OwlCarousel>
-
-
         </div>
     );
 };

@@ -1,3 +1,9 @@
+/* active link css */
+.active {
+    background-color: aqua;
+}
+
+
 .banner{
     height: 80vh;
 }

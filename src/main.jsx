@@ -11,6 +11,7 @@ import About from './Pages/About.jsx';
 import Blog from './Pages/Blog.jsx';
 import Contact from './Pages/Contact.jsx';
 import AllCourses from './Pages/AllCourses.jsx';
+import UserRagistration from './Pages/userRagistration.jsx';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path:"courses",
         element: <AllCourses/>
+      },
+      {
+        path:"userregister",
+        element: <UserRagistration/>
       },
     ]
   },
