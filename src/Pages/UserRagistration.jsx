@@ -21,9 +21,12 @@ const submitHandler = (e) =>{
     else {
         axios.get("http://localhost:8080/register", formData).then(
             (res)=>{
-                alert(res.data.msg);
+                alert(res.data.name);
             }
         )
+        .catch((error) => {
+            console.error("Error:", error);
+        });
     }
 }
 

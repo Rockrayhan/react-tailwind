@@ -12,6 +12,8 @@ import Blog from './Pages/Blog.jsx';
 import Contact from './Pages/Contact.jsx';
 import AllCourses from './Pages/AllCourses.jsx';
 import UserRagistration from './Pages/userRagistration.jsx';
+import Course from './Components/Course.jsx';
+import CourseDetails from './Components/CourseDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -37,7 +39,17 @@ const router = createBrowserRouter([
       },
       {
         path:"courses",
-        element: <AllCourses/>
+        element: <AllCourses/>,
+        loader: () =>fetch('http://localhost:8080/productsall')
+      },
+      {
+        path:"course",
+        element: <Course/>
+      },
+      {
+        path:"course/:courseId",
+        element: <CourseDetails/>,
+        loader: ({params}) => fetch(`http://localhost:8080/product/${params.courseId}`)
       },
       {
         path:"userregister",
