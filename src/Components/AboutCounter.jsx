@@ -9,7 +9,7 @@ const AboutCounter = () => {
 
 
     return (
-        <div>
+        <div className='py-10'>
             <div className='center about-counter'>
                 <div className='text-white bg-teal-800 px-20 py-10 rounded-2xl '>
                     <div className='grid grid-cols-1 lg:grid-cols-4 gap-10 justify-center'>

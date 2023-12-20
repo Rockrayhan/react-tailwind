@@ -1,6 +1,7 @@
 import React from 'react';
-import AboutCounter from './aboutCounter';
 
+import parrot from '../lotty.json';
+import Lottie from 'lottie-react';
 
 const Banner = () => {
     return (
@@ -23,7 +24,8 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="col-span-1 lg:col-span-1 mt-12">
-                        <img src="assets/img/banner.png" alt="" />
+                        {/* <img src="assets/img/banner.png" alt="" /> */}
+                        <Lottie animationData={parrot}></Lottie>
                     </div>
                 </div>
             </div>
