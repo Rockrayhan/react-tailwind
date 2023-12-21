@@ -42,10 +42,10 @@ const router = createBrowserRouter([
         element: <AllCourses/>,
         loader: () =>fetch('http://localhost:8080/productsall')
       },
-      {
-        path:"course",
-        element: <Course/>
-      },
+      // {
+      //   path:"course",
+      //   element: <Course/>
+      // },
       {
         path:"course/:courseId",
         element: <CourseDetails/>,

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopInstructors = () => {
     return (
-        <div className='grid grid-cols-2 mt-40 10 gap-6'>
+        <div className='grid grid-cols-2 mt-40 10 gap-6 container'>
             <div className="col-span-1">
                 <div className='flex flex-col gap-10'>
 
