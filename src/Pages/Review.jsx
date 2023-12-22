@@ -20,7 +20,7 @@ const Review = () => {
 
 
     const userInsert = ()=>{
-        axios.post("http://localhost/tailwind-react/api/userInsert.php", {data:userInfo}).then(res=>{
+        axios.post("http://localhost/tailwind-react/api/reviewInsert.php", {data:userInfo}).then(res=>{
             alert(res.data.msg);
             return navigate('/review');
         })
@@ -33,7 +33,7 @@ console.log(userInfo);
 
     return (
         <div>
-                <h1> Enter Your Review </h1>
+            <h1> Enter Your Review </h1>
         <form onSubmit={handleSubmit} >
             <input type="text" name='name' onChange={handleChange} placeholder='Enter your name' /><br />
             <input type="text" name='role' onChange={handleChange} placeholder='Enter Your Role' /><br />
