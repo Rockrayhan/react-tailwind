@@ -19,6 +19,14 @@ const AllCourses = () => {
     setCart(newCart);
   }
   
+  const handleRemoveFromCart = (productId) => {
+    // Implement the logic to remove the product from the cart
+    const updatedCart = cart.filter((product) => product.id !== productId);
+    setCart(updatedCart);
+
+
+    
+  };
 
 
 
@@ -49,13 +57,16 @@ const AllCourses = () => {
   key={data.id}
   data={data}
   handleAddToCart={handleAddToCart}
+
   >
   </Course> )
 }
 
 </div>
 
-<Cart cart={cart}></Cart>
+<Cart cart={cart}
+        handleRemoveFromCart={handleRemoveFromCart}
+></Cart>
 
        </div>
       </div>
