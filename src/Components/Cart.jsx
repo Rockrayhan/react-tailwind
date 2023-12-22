@@ -22,7 +22,7 @@ const Cart = ({cart, handleRemoveFromCart }) => {
         {cart.map((product) => (
           <li key={product.id}>
             {product.course}: $ {parseInt(product.price)}
-            <button onClick={() => handleRemoveFromCart(product.id)}> x </button>
+            <button className="border-2 p-1 bg-red-500 ms-2" onClick={() => handleRemoveFromCart(product.id)}> x </button>
           </li>
         ))}
       </ul>

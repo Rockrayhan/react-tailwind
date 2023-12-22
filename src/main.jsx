@@ -14,6 +14,7 @@ import AllCourses from './Pages/AllCourses.jsx';
 import UserRagistration from './Pages/userRagistration.jsx';
 import Course from './Components/Course.jsx';
 import CourseDetails from './Components/CourseDetails.jsx';
+import Review from './Pages/Review.jsx';
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       //   path:"course",
       //   element: <Course/>
       // },
+      {
+        path:"review",
+        element: <Review/>
+      },
       {
         path:"course/:courseId",
         element: <CourseDetails/>,
