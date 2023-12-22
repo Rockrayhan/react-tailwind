@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Course = (props) => {
     console.log(props.data);
-    const { course_id, course, category, price} = props.data ;
+    const { id, course, category, price} = props.data ;
     const handleAddToCart = props.handleAddToCart ;
     return (
         <div>
@@ -55,8 +55,8 @@ const Course = (props) => {
                         </div>
                     </div>
 <div className='flex gap-6'>
-<Link className='border-2 border-blue-600 p-2 hover:bg-sky-600 hover:text-white' to={`/course/${course_id}`}>  See Details  </Link>
-    <button className='border-2 border-blue-600 p-2 hover:bg-sky-600 hover:text-white' onClick={()=> handleAddToCart()}> Add to Cart </button>
+<Link className='border-2 border-blue-600 p-2 hover:bg-sky-600 hover:text-white' to={`/course/${id}`}>  See Details  </Link>
+    <button className='border-2 border-blue-600 p-2 hover:bg-sky-600 hover:text-white' onClick={()=> handleAddToCart(props.data)}> Add to Cart </button>
 </div>
                 </div>
             </div>

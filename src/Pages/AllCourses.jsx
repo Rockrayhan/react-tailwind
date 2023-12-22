@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Breadcrumb from '../Components/Breadcum';
 import { useLoaderData } from "react-router-dom";
 import Course from "../Components/Course";
+import Cart from '../Components/Cart';
 const AllCourses = () => {
 
   const [courses, setCourses] = useState([]);
@@ -13,11 +14,12 @@ const AllCourses = () => {
   }, []);
   // console.log(courses);
 
-  const handleAddToCart = (data) => {
-    const newCart = [...cart, courses];
+  const handleAddToCart = (product) => {
+    const newCart = [...cart, product];
     setCart(newCart);
   }
   
+
 
 
 
@@ -36,26 +38,26 @@ const AllCourses = () => {
 
         <div className='flex container gap-4'>
 
-       
+       <div className='flex gap-5 container'>
+        
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  container my-16">
 
 
 
-          {
-            courses.map(data => <Course
-            key={data.id}
-            data={data}
-            handleAddToCart={handleAddToCart}
-            >
-            </Course> )
-          }
-          
-      </div>
+{
+  courses.map(data => <Course
+  key={data.id}
+  data={data}
+  handleAddToCart={handleAddToCart}
+  >
+  </Course> )
+}
 
-      <div className='bg-orange-400 rounded-lg p-5 h-1/3 w-1/4'>
-          <h4 className='text-xl font-bold'> Order Summery </h4>
-          <p> Selected Items: {cart.length} </p>
-      </div>
+</div>
+
+<Cart cart={cart}></Cart>
+
+       </div>
       </div>
 
     </div>
