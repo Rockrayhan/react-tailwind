@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Course = ({myData}) => {
-    console.log(myData);
-    const { id, product, price, model } = myData ;
+const Course = (props) => {
+    console.log(props.data);
+    const { course_id, course, category, price} = props.data ;
+    const handleAddToCart = props.handleAddToCart ;
     return (
         <div>
             <div className="col-span-1">
                 <div className="p-5 flex flex-col gap-5 rounded-md border border-sky-950">
                     <img src="https://www.creativeitinstitute.com/images/course/course_1662724358.jpg" alt="" />
-                    <h1 className="text-2xl font-semibold"> {product} </h1>
-                    <h6 className="text-gray-600"> {model} </h6>
+                    <h1 className="text-2xl font-semibold"> {course} </h1>
+                    <h6 className="text-gray-600"> {category} </h6>
                     <div className="flex gap-4">
                         <div className="flex">
                             <svg
@@ -53,7 +54,10 @@ const Course = ({myData}) => {
                             <p> 5 courses</p>
                         </div>
                     </div>
-                    <Link to={`/course/${id}`}>  See Details  </Link>
+<div className='flex gap-6'>
+<Link className='border-2 border-blue-600 p-2 hover:bg-sky-600 hover:text-white' to={`/course/${course_id}`}>  See Details  </Link>
+    <button className='border-2 border-blue-600 p-2 hover:bg-sky-600 hover:text-white' onClick={()=> handleAddToCart()}> Add to Cart </button>
+</div>
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path:"courses",
         element: <AllCourses/>,
-        loader: () =>fetch('http://localhost:8080/productsall')
+        loader: () =>fetch('http://localhost:8080/coursesall')
       },
       // {
       //   path:"course",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path:"course/:courseId",
         element: <CourseDetails/>,
-        loader: ({params}) => fetch(`http://localhost:8080/product/${params.courseId}`)
+        loader: ({params}) => fetch(`http://localhost:8080/course/${params.courseId}`)
       },
       {
         path:"userregister",
