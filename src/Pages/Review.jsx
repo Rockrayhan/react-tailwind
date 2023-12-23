@@ -20,7 +20,8 @@ const Review = () => {
 
 
     const userInsert = ()=>{
-        axios.post("http://localhost/tailwind-react/api/reviewInsert.php", {data:userInfo}).then(res=>{
+        // axios.post("http://localhost/tailwind-react/api/reviewInsert.php", {data:userInfo}).then(res=>{ 
+        axios.post("http://localhost/wdpf55_react/react-tailwind/api/reviewInsert.php", {data:userInfo}).then(res=>{
             alert(res.data.msg);
             return navigate('/review');
         })
