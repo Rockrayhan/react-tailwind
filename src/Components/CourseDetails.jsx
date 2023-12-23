@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Lottie from 'lottie-react';
+import walking from '../walking.json';
 
 const CourseDetails = () => {
     const myCourse = useLoaderData();
@@ -9,11 +11,11 @@ const CourseDetails = () => {
 
             <div className='grid grid-cols-3 gap-6 mt-5'>
                 <div className='col-span-2 flex flex-col gap-6'>
-                    <h1 className='text-4xl text-teal-900 font-bold'> Course Name: {myCourse[0].course} </h1>
+                    <h1 className='text-4xl text-orange-900 font-bold'> Course Name: {myCourse[0].course} </h1>
 
-                    <h1 className='text-xl font-semibold border-b-2 border-red-600 bg-red-100 p-5'> OverView </h1>
+                    <h1 className='text-2xl font-semibold border-b-2 border-red-800 bg-red-300 p-5'> OverView </h1>
 
-                    <div className=' bg-teal-100 py-10 p-5'>
+                    <div className=' bg-orange-200 rounded-xl py-10 p-5'>
                         <h6 className='text-2xl font-bold my-4'> Course Description :  </h6>
                         <p className='text-gray-600'>{myCourse[0].desc}</p>
 
@@ -51,10 +53,13 @@ const CourseDetails = () => {
 
 <div className='col-span-1 mt-16 '>
     <div className='border-2 rounded-lg p-6 flex flex-col'>
-    <img src="https://i.pngimg.me/thumb/f/720/f17af4a132404bdd96ff.jpg" alt="" />
-    <h6 className='text-red-700 font-bold  text-2xl'> Price : {myCourse[0].price} </h6>
-    <h6 className='text-gray-700 font-bold  text-xl'> Category : {myCourse[0].category} </h6>
-    <button className='py-4 px-6 mt-6 bg-green-600 hover:bg-red-600 text-white font-bold rounded-md'> Enroll Now </button>
+   <div className='bg-yellow-400 rounded-xl'> <Lottie animationData={walking}></Lottie></div>
+
+    <form action="">
+
+        <input type="text" value={myCourse[0].course} disabled  />
+    </form>
+    <button className='py-4 px-6 mt-6 bg-red-600 hover:bg-orange-500 text-white  font-bold rounded-md'> Enroll Now </button>
     </div>
 
 </div>

@@ -1,13 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import {  useLocation, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
     
 
     const [userInfo, setUserInfo] = useState({})
     const navigate = useNavigate();
-    const location = useLocation();
     const { cart } = navigate.state || {};
 
     console.log(cart);
@@ -41,7 +40,7 @@ const Checkout = () => {
             <h1> Confirm Your Order !! </h1>
 
             <form action="">
-                
+                <input type="text"  />
             </form>
         </div>
     );

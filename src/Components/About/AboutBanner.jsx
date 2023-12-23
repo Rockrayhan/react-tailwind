@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutBanner = () => {
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 mt-16 gap-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 my-16 gap-12'>
             <div className="col-span-1">
                 <img src="assets/img/img9.png" alt="" />
             </div>

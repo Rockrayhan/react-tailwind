@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const Courses = () => {
   const [course, setcourse] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:8080/productsall')
+    fetch('http://localhost:8080/coursesall')
         .then(res => res.json())
         .then(data => setcourse(data)) ;
 }, []);
@@ -32,7 +32,7 @@ const Courses = () => {
                               <div class="px-5 pb-5">
                                 <a href="#">
                                   <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                    {item.product}
+                                    {item.course}
                                   </h5>
                                 </a>
                                 <div class="flex items-center justify-between">
