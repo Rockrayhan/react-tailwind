@@ -1,16 +1,14 @@
 /* active link css */
 .active {
     background-color: aqua;
+    padding: 20px;
+    color: #120F2D ;
+    font-weight: bold;
 }
 
 
 .banner{
     height: 100vh;
-}
-
-
-.about-counter{
-    /* margin-top: -40px; */
 }
 
 

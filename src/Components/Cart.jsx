@@ -14,7 +14,7 @@ const Cart = ({cart, handleRemoveFromCart }) => {
     // console.log(typeof total);
 
   return (
-      <div className="bg-orange-400 rounded-lg p-5 h-1/3 w-1/4">
+      <div className="bg-orange-400 rounded-lg p-5 h-1/3 w-1/4 sticky top-0">
         <h4 className="text-xl font-bold"> Order Summery </h4>
         <p> Selected Items: {cart.length} </p>
         =====================
