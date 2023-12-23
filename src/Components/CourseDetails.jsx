@@ -1,11 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import walking from '../walking.json';
+import { useNavigate  } from 'react-router-dom';
+import axios from 'axios';
 
 const CourseDetails = () => {
     const myCourse = useLoaderData();
     console.log(myCourse[0].course);
+
+    const [userInfo, setUserInfo] = useState({});
+    const navigate = useNavigate();
+
+    const handleSubmit = (e)=> {
+        e.preventDefault();
+        userInsert();
+    }
+
+    const handleChange = (e)=> {
+        const name = e.target.name;
+        const value = e.target.value;
+        setUserInfo((val)=>({...val, [name]:value}));
+    }
+
+    
+    const userInsert = ()=>{
+        axios.post("http://localhost/tailwind-react/api/orders.php", {data:userInfo}).then(res=>{ 
+            alert(res.data.msg);
+            // return navigate('/review');
+        })
+       
+    }
+
+console.log(userInfo);
+
     return (
         <div className='container'>
 
@@ -19,22 +47,24 @@ const CourseDetails = () => {
                         <h6 className='text-2xl font-bold my-4'> Course Description :  </h6>
                         <p className='text-gray-600'>{myCourse[0].desc}</p>
 
+                        <p className='font-semibold'> Get The Course at: ${myCourse[0].price} </p>
+
                         <div>
                             <h6 className='text-xl font-bold my-4 '> What You’ll get From US </h6>
                             <ul class="list-disc space-y-2 text-gray-600 p-6">
-                                <li className="">
+                                <li>
                                     Rapid and Efficient Styling with Utility Classes
                                 </li>
-                                <li className="">
+                                <li>
                                     Responsive Design Made Easy
                                 </li>
-                                <li className="">
+                                <li>
                                     Consistent and Predictable Styling
                                 </li>
-                                <li className="">
+                                <li>
                                     Extensive Library of Pre-built Components
                                 </li>
-                                <li className="">
+                                <li>
                                     Streamlined Workflow for Faster Development
                                 </li>
                             </ul>
@@ -55,11 +85,23 @@ const CourseDetails = () => {
     <div className='border-2 rounded-lg p-6 flex flex-col'>
    <div className='bg-yellow-400 rounded-xl'> <Lottie animationData={walking}></Lottie></div>
 
-    <form action="">
+   <form onSubmit={handleSubmit} >
+            User Name: <br />
+            <input type="text" name='user_name' onChange={handleChange} placeholder='Enter your name' required/><br />
 
-        <input type="text" value={myCourse[0].course} disabled  />
-    </form>
-    <button className='py-4 px-6 mt-6 bg-red-600 hover:bg-orange-500 text-white  font-bold rounded-md'> Enroll Now </button>
+            Mobile: <br />
+            <input type="text" name='mobile' onChange={handleChange} placeholder='Enter Your Number' required/> <br />
+
+            Course Name:  
+             <input type="text" name='course_name' onChange={handleChange} value={myCourse[0].course} /><br />
+
+
+            Price: 
+            <input type="number" name='price' value={myCourse[0].price} onChange={handleChange}  />  <br />
+
+            <input className='py-4 px-6 mt-6 bg-red-600 hover:bg-orange-500 text-white  font-bold rounded-md cursor-pointer' type="submit" name='submit' value="Enroll Now" /><br />
+        </form>
+    {/* <button className='py-4 px-6 mt-6 bg-red-600 hover:bg-orange-500 text-white  font-bold rounded-md'> Enroll Now </button> */}
     </div>
 
 </div>
