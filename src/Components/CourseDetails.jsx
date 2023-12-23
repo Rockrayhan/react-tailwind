@@ -25,14 +25,7 @@ const CourseDetails = () => {
 
     
     const userInsert = () => {
-        // Include default values for course_name and price
-        const dataToSend = {
-          ...userInfo,
-          course_name: myCourse[0].course,
-          price: myCourse[0].price,
-        };
-    
-        axios.post("http://localhost/tailwind-react/api/orders.php", dataToSend).then((res) => {
+        axios.post("http://localhost/tailwind-react/api/orders.php", userInfo).then((res) => {
           alert(res.data.msg);
           // return navigate('/review');
         });
@@ -97,6 +90,12 @@ console.log(userInfo);
 
             Mobile: <br />
             <input type="text" name='mobile' onChange={handleChange} placeholder='Enter Your Number' required/> <br />
+
+            Course Name:  
+        <input type="text" name="course_name" value={myCourse[0].course} readOnly /><br />
+
+        Price: 
+        <input type="number" name="price" value={myCourse[0].price} onChange={handleChange} readOnly />  <br />
 
 
             <input className='py-4 px-6 mt-6 bg-red-600 hover:bg-orange-500 text-white  font-bold rounded-md cursor-pointer' type="submit" name='submit' value="Enroll Now" /><br />
