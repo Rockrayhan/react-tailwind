@@ -26,7 +26,7 @@ const Testimonial = () => {
                 <div className='flex gap-8'>
                     <div className='w-1/5'><img className='rounded-full' src="https://images.template.net/79088/Free-Single-Person-Vector-1.jpg" alt="" /></div>
                     <div> <h1 className='text-xl font-semibold'> {item.name}  </h1> 
-                        <h6 className='text-gray-600'> {item.role} </h6>
+                        <h6 className='text-gray-600 text-lg'> {item.role} </h6>
                     </div>
 
                 </div>

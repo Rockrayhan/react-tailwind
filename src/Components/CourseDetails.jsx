@@ -96,7 +96,7 @@ console.log(userInfo);
 
         <p className='font-semibold border-red-600 border p-2'> Course Title - <span className='text-xl text-red-500'>{myCourse[0].course}</span> </p> 
 
-        <p className='font-semibold my-5 border-red-600 border p-2'> Price $- <span className='text-xl text-red-500'>{myCourse[0].price}</span> </p> 
+        <p className='font-semibold my-5 border-red-600 border p-2'> Price $ - <span className='text-xl text-red-500'>{myCourse[0].price}</span> </p> 
 
       <input
         type="text"

@@ -1,4 +1,7 @@
 1. change api path as per device. (always)
-2. make delete for Reviews, orders (todo)
-3. CRUD for Instructors, Offline Courses
-4. 
+
+
+
+
+
+4. demo data entry
