@@ -13,7 +13,7 @@ const CourseDetails = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e)=> {
-        e.preventDefault();
+        // e.preventDefault();
         userInsert();
     }
 
@@ -32,9 +32,8 @@ const CourseDetails = () => {
           price: myCourse[0].price,
         };
     
-        axios.post("http://localhost/tailwind-react/api/orders.php", dataToSend).then((res) => {
+        axios.post("http://localhost/wdpf55_react/react-tailwind/api/orders.php", dataToSend).then((res) => {
           alert(res.data.msg);
-          // return navigate('/review');
         });
       };
 
