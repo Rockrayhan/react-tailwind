@@ -25,7 +25,14 @@ const CourseDetails = () => {
 
     
     const userInsert = () => {
-        axios.post("http://localhost/tailwind-react/api/orders.php", userInfo).then((res) => {
+        // Include default values for course_name and price
+        const dataToSend = {
+          ...userInfo,
+          course_name: myCourse[0].course,
+          price: myCourse[0].price,
+        };
+    
+        axios.post("http://localhost/tailwind-react/api/orders.php", dataToSend).then((res) => {
           alert(res.data.msg);
           // return navigate('/review');
         });
@@ -79,33 +86,51 @@ console.log(userInfo);
                     </div>
 
                 </div>
+                <div className='col-span-1 mt-16'>
+  <div className='border-2 rounded-lg p-6 flex flex-col'>
 
-<div className='col-span-1 mt-16 '>
-    <div className='border-2 rounded-lg p-6 flex flex-col'>
-   <div className='bg-yellow-400 rounded-xl'> <Lottie animationData={walking}></Lottie></div>
-
-   <form onSubmit={handleSubmit} >
-            User Name: <br />
-            <input type="text" name='user_name' onChange={handleChange} placeholder='Enter your name' required/><br />
-
-            Mobile: <br />
-            <input type="text" name='mobile' onChange={handleChange} placeholder='Enter Your Number' required/> <br />
-
-            Course Name:  
-        <input type="text" name="course_name" value={myCourse[0].course} readOnly /><br />
-
-        Price: 
-        <input type="number" name="price" value={myCourse[0].price} onChange={handleChange} readOnly />  <br />
-
-
-            <input className='py-4 px-6 mt-6 bg-red-600 hover:bg-orange-500 text-white  font-bold rounded-md cursor-pointer' type="submit" name='submit' value="Enroll Now" /><br />
-        </form>
-    {/* <button className='py-4 px-6 mt-6 bg-red-600 hover:bg-orange-500 text-white  font-bold rounded-md'> Enroll Now </button> */}
+    <div className='bg-yellow-400 rounded-xl'>
+      <Lottie animationData={walking}></Lottie>
     </div>
 
+    <form onSubmit={handleSubmit} className='mt-6'>
+
+        <p className='font-semibold border-red-600 border p-2'> Course Title - <span className='text-xl text-red-500'>{myCourse[0].course}</span> </p> 
+
+        <p className='font-semibold my-5 border-red-600 border p-2'> Price $- <span className='text-xl text-red-500'>{myCourse[0].price}</span> </p> 
+
+      <input
+        type="text"
+        name='user_name'
+        onChange={handleChange}
+        placeholder='Enter your name'
+        className='py-2 px-4 mb-4 border-2 rounded-md w-full'
+        required
+      />
+
+      <input
+        type="text"
+        name='mobile'
+        onChange={handleChange}
+        placeholder='Enter Your Number'
+        className='py-2 px-4 mb-4 border-2 rounded-md w-full'
+        required
+      />
+
+      <button
+        className='py-2 px-4 bg-red-600 hover:bg-orange-500 text-white font-bold rounded-md cursor-pointer'
+        type="submit"
+        name='submit'
+      >
+        Enroll Now
+      </button>
+    </form>
+
+  </div>
 </div>
-            </div>
-        </div>
+
+</div>
+</div>
     );
 };
 
