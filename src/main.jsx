@@ -12,7 +12,6 @@ import Blog from './Pages/Blog.jsx';
 import Contact from './Pages/Contact.jsx';
 import AllCourses from './Pages/AllCourses.jsx';
 import UserRagistration from './Pages/userRagistration.jsx';
-import Course from './Components/Course.jsx';
 import CourseDetails from './Components/CourseDetails.jsx';
 import Review from './Pages/Review.jsx';
 import Checkout from './Pages/Checkout.jsx';
