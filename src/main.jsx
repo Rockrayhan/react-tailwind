@@ -39,9 +39,9 @@ const router = createBrowserRouter([
         element: <Contact/>
       },
       {
-        path:"courses",
+        path:"/courses",
         element: <AllCourses/>,
-        loader: () =>fetch('http://localhost:8080/coursesall')
+        loader: () =>fetch('./fakedata.json')
       },
       // {
       //   path:"course",
@@ -56,9 +56,9 @@ const router = createBrowserRouter([
         element: <Checkout/>
       },
       {
-        path:"course/:courseId",
+        path:"/course/:id",
         element: <CourseDetails/>,
-        loader: ({params}) => fetch(`http://localhost:8080/course/${params.courseId}`)
+        loader: () => fetch(`./fakedata.json`)
       },
       {
         path:"userregister",

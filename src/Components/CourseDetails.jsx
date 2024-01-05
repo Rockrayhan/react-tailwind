@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import walking from '../walking.json';
 import { useNavigate  } from 'react-router-dom';
@@ -7,7 +7,11 @@ import axios from 'axios';
 
 const CourseDetails = () => {
     const myCourse = useLoaderData();
-    console.log(myCourse[0].course);
+    // console.log(myCourse);
+    const {id} = useParams();
+    const idInt = parseInt(id);
+    const item = myCourse.find(job => job.id === idInt);
+    console.log(item); 
 
     const [userInfo, setUserInfo] = useState({});
     const navigate = useNavigate();
@@ -24,35 +28,35 @@ const CourseDetails = () => {
     }
 
     
-    const userInsert = () => {
-        // Include default values for course_name and price
-        const dataToSend = {
-          ...userInfo,
-          course_name: myCourse[0].course,
-          price: myCourse[0].price,
-        };
+//     const userInsert = () => {
+//         // Include default values for course_name and price
+//         const dataToSend = {
+//           ...userInfo,
+//           course_name: myCourse[0].course,
+//           price: myCourse[0].price,
+//         };
     
-        axios.post("http://localhost/wdpf55_react/react-tailwind/api/orders.php", dataToSend).then((res) => {
-          alert(res.data.msg);
-        });
-      };
+//         axios.post("http://localhost/wdpf55_react/react-tailwind/api/orders.php", dataToSend).then((res) => {
+//           alert(res.data.msg);
+//         });
+//       };
 
-console.log(userInfo);
+// console.log(userInfo);
 
     return (
         <div className='container'>
 
             <div className='grid grid-cols-3 gap-6 mt-5'>
                 <div className='col-span-2 flex flex-col gap-6'>
-                    <h1 className='text-4xl text-orange-900 font-bold'> Course Name: {myCourse[0].course} </h1>
+                    <h1 className='text-4xl text-orange-900 font-bold'> Course Name: {item.course} </h1>
 
                     <h1 className='text-2xl font-semibold border-b-2 border-red-800 bg-red-300 p-5'> OverView </h1>
 
                     <div className=' bg-orange-200 rounded-xl py-10 p-5'>
                         <h6 className='text-2xl font-bold my-4'> Course Description :  </h6>
-                        <p className='text-gray-600'>{myCourse[0].desc}</p>
+                        <p className='text-gray-600'>{item.desc}</p>
 
-                        <p className='font-semibold'> Get The Course at: ${myCourse[0].price} </p>
+                        <p className='font-semibold'> Get The Course at: ${item.price} </p>
 
                         <div>
                             <h6 className='text-xl font-bold my-4 '> What You’ll get From US </h6>
@@ -94,9 +98,9 @@ console.log(userInfo);
 
     <form onSubmit={handleSubmit} className='mt-6'>
 
-        <p className='font-semibold border-red-600 border p-2'> Course Title - <span className='text-xl text-red-500'>{myCourse[0].course}</span> </p> 
+        <p className='font-semibold border-red-600 border p-2'> Course Title - <span className='text-xl text-red-500'>{item.course}</span> </p> 
 
-        <p className='font-semibold my-5 border-red-600 border p-2'> Price $ - <span className='text-xl text-red-500'>{myCourse[0].price}</span> </p> 
+        <p className='font-semibold my-5 border-red-600 border p-2'> Price $ - <span className='text-xl text-red-500'>{item.price}</span> </p> 
 
       <input
         type="text"

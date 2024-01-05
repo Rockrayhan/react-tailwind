@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "course": "Introduction to Programming",
+    "category": "Computer Science",
+    "price": 49.99,
+    "img": "https://example.com/intro_programming.jpg",
+    "desc": "This course provides a comprehensive introduction to programming concepts, covering fundamental topics to help you build a strong foundation in computer science."
+  },
+  {
+    "id": 2,
+    "course": "Data Science Fundamentals",
+    "category": "Data Science",
+    "price": 79.99,
+    "img": "https://example.com/data_science_fundamentals.jpg",
+    "desc": "Explore the essential principles of data science, including data analysis, machine learning, and statistical concepts, in this comprehensive fundamentals course."
+  },
+  {
+    "id": 3,
+    "course": "Web Development Bootcamp",
+    "category": "Web Development",
+    "price": 99.99,
+    "img": "https://example.com/web_development_bootcamp.jpg",
+    "desc": "Join our intensive bootcamp to master the skills required for web development. Learn HTML, CSS, JavaScript, and more to kickstart your career as a web developer."
+  },
+  {
+    "id": 4,
+    "course": "Graphic Design Basics",
+    "category": "Design",
+    "price": 59.99,
+    "img": "https://example.com/graphic_design_basics.jpg",
+    "desc": "Unlock your creativity and delve into the world of graphic design basics. This course covers design principles, tools, and techniques to create visually stunning graphics."
+  },
+  {
+    "id": 5,
+    "course": "Business Analytics Essentials",
+    "category": "Business",
+    "price": 69.99,
+    "img": "https://example.com/business_analytics_essentials.jpg",
+    "desc": "Gain a deep understanding of business analytics essentials, including data-driven decision-making and insights. Equip yourself with the skills needed for success in the business world."
+  }
+]
