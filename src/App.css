@@ -1,4 +1,8 @@
 /* active link css */
+body{
+    overflow-x: hidden;
+}
+
 .active-link {
     background-color: aqua;
     padding: 20px;

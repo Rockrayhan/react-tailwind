@@ -15,7 +15,7 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
   // console.log(typeof total);
 
   return (
-    <div className="bg-orange-400 rounded-lg p-5 h-1/3 w-1/4 sticky top-0">
+    <div className="bg-orange-400 rounded-lg p-5 h-fit w-1/4 sticky top-0">
       <h4 className="text-xl font-bold"> Order Summery </h4>
       <p> Selected Items: {cart.length} </p>
       =====================
@@ -34,7 +34,8 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
 
       <Link
         className="bg-red-700 text-white font-bold p-2 mt-2"
-        to={{ pathname: '/checkout', state: { cart } }}
+        // to={{ pathname: '/checkout', state: { cart } }}
+        onClick={()=>{alert('checkout Feature will be added Soon')}}
       >
         Checkout
       </Link>
