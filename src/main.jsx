@@ -15,6 +15,7 @@ import UserRagistration from './Pages/userRagistration.jsx';
 import CourseDetails from './Components/CourseDetails.jsx';
 import Review from './Pages/Review.jsx';
 import Checkout from './Pages/Checkout.jsx';
+import Courses from './Components/Courses.jsx';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       {
         path:"/courses",
         element: <AllCourses/>,
+        loader: () =>fetch('./fakedata.json')
+      },
+      {
+        path:"/topCourses",
+        element: <Courses/>,
         loader: () =>fetch('./fakedata.json')
       },
       // {
