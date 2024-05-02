@@ -42,12 +42,12 @@ const router = createBrowserRouter([
       {
         path:"/courses",
         element: <AllCourses/>,
-        loader: () =>fetch('./fakedata.json')
+        loader: () =>fetch('/fakedata.json')
       },
       {
         path:"/topCourses",
         element: <Courses/>,
-        loader: () =>fetch('./fakedata.json')
+        loader: () =>fetch('/fakedata.json')
       },
       // {
       //   path:"course",
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
       {
         path:"/course/:id",
         element: <CourseDetails/>,
-        loader: () => fetch(`./fakedata.json`)
+        loader: () => fetch('./fakedata.json')
       },
       {
         path:"userregister",

@@ -1,50 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Lottie from "lottie-react";
 import walking from "../walking.json";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
 
 const CourseDetails = () => {
-  const myCourse = useLoaderData();
-  // console.log(myCourse);
+  const [myData, setMyData] = useState([]);
+  // const [loading, setLoading] = useState(false);
+
   const { id } = useParams();
+  console.log(id);
   const idInt = parseInt(id);
-  const item = myCourse.find((job) => job.id === idInt);
+
+ 
+  useEffect(() => {
+    // setLoading(true);
+    fetch("/fakedata.json")
+    .then((res) => res.json())
+    .then((data) => {
+        setMyData(data) 
+    })
+    // .catch((err)=> {
+    //     console.log(err.message);
+    // })
+    // .finally(()=> {
+    //     setLoading(false)
+    // }) ;
+    
+  },[])
+
+  const item = myData.find((SingleItem) => SingleItem.id === idInt);
   console.log(item);
 
-  // const [userInfo, setUserInfo] = useState({});
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-      
-      e.preventDefault();
-      alert("order Confirmed");
-    //   alert.preventDefault();
-    // userInsert();
-    // navigate('/courses')
-  };
-
-  // const handleChange = (e)=> {
-  //     const name = e.target.name;
-  //     const value = e.target.value;
-  //     setUserInfo((val)=>({...val, [name]:value}));
+  // if(loading){
+  //  return <div> Loading... </div>
   // }
 
-  //     const userInsert = () => {
-  //         // Include default values for course_name and price
-  //         const dataToSend = {
-  //           ...userInfo,
-  //           course_name: myCourse[0].course,
-  //           price: myCourse[0].price,
-  //         };
-
-  //         axios.post("http://localhost/wdpf55_react/react-tailwind/api/orders.php", dataToSend).then((res) => {
-  //           alert(res.data.msg);
-  //         });
-  //       };
-
-  // console.log(userInfo);
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      alert("order Confirmed");
+  };
 
   return (
     <div className="container">
@@ -52,7 +47,7 @@ const CourseDetails = () => {
         <div className="col-span-2 flex flex-col gap-6">
           <h1 className="text-4xl text-orange-900 font-bold">
             
-            Course Name: {item.course}
+            Course Name: {item?.course}
           </h1>
 
           <h1 className="text-2xl font-semibold border-b-2 border-red-800 bg-red-300 p-5">
@@ -62,9 +57,9 @@ const CourseDetails = () => {
 
           <div className=" bg-orange-200 rounded-xl py-10 p-5">
             <h6 className="text-2xl font-bold my-4"> Course Description : </h6>
-            <p className="text-gray-600">{item.desc}</p>
+            <p className="text-gray-600">{item?.desc}</p>
 
-            <p className="font-semibold"> Get The Course at: ${item.price} </p>
+            <p className="font-semibold"> Get The Course at: ${item?.price} </p>
 
             <div>
               <h6 className="text-xl font-bold my-4 ">
@@ -101,13 +96,13 @@ const CourseDetails = () => {
               <p className="font-semibold border-red-600 border p-2">
                 
                 Course Title -
-                <span className="text-xl text-red-500">{item.course}</span>
+                <span className="text-xl text-red-500">{item?.course}</span>
               </p>
 
               <p className="font-semibold my-5 border-red-600 border p-2">
                 
                 Price $ -
-                <span className="text-xl text-red-500">{item.price}</span>
+                <span className="text-xl text-red-500">{item?.price}</span>
               </p>
 
               <input

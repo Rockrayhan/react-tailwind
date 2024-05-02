@@ -7,7 +7,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("./fakedata.json");
+        const response = await fetch("/fakedata.json");
         const data = await response.json();
 
         if (Array.isArray(data)) {
