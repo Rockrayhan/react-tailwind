@@ -5,7 +5,7 @@ import Lottie from 'lottie-react';
 
 const Banner = () => {
     return (
-            <div className='banner bg-cyan-950 text-white '>
+            <div className='banner bg-cyan-950 text-white lg:h-screen'>
                 <div className='container grid grid-cols-1 lg:grid-cols-2 gap-20 '>
                     <div className="col-span-1 lg:col-span-1 mt-12">
                         <div className='flex flex-col text-center gap-10 justify-center h-full'>

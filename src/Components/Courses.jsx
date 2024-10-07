@@ -29,7 +29,7 @@ const Courses = () => {
         Here are Our latest Courses
       </h1>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  container my-16">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  container my-16 p-10">
         {courses.slice(0, 3).map((data) => (
           <Course
             key={data.id}

@@ -9,6 +9,7 @@ import Testimonial from '../Components/Testimonial';
 import AboutCounter from '../Components/aboutCounter';
 import ChatApp from '../Components/ChatApp';
 import TopInstructors from '../Components/About/TopInstructors';
+import AboutBanner from '../Components/About/AboutBanner';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 
         <Banner></Banner>
         <AboutCounter></AboutCounter>
+        <div className='container'><AboutBanner/></div>
         <Catagories></Catagories>
         <Types></Types>
         <Courses></Courses>

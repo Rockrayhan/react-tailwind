@@ -2,7 +2,7 @@ import React from 'react';
 
 const Types = () => {
     return (
-        <div className='py-10 mt-4 text-center'>
+        <div className='py-10 mt-4 text-center p-10'>
             <h1 className='text-4xl font-bold'> Transform Your Life </h1>
             <p className='mt-3 text-gray-600'>Discover Your Perfect Program In Our Courses.</p>
 

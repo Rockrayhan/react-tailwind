@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-       <div className='footer pt-24 pb-6 text-white flex items-end h-fit'>
+       <div className='footer pt-36 pb-16 text-white flex items-end h-fit'>
        <div className="container">
        <div className='grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 text-center text-white'>
             <div className="col-span-2 flex flex-col gap-5"> 
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         <hr className='mt-10' />
-        <div className='flex justify-between mt-10'>
+        <div className='flex justify-between mt-10 md:flex-wrap px-8'>
             <p> @ 2023 ALL Right Reserved by <span className='font-serif text-blue-200'>Ektu Khani Tech</span> </p>
             <div className='flex justify-evenly gap-14'>
                 <p> Terms Of Service </p>
